@@ -1,0 +1,69 @@
+<!-- 디스플레이를 0으로 만들어 주기 
+<button class = num-button>로 숫자들을 감싸주기
+사칙연산(operator)들 하나하나씩 버튼으로 감싸주기
+그리고 라인별로 태그를 감싸준다 (css적용을 위해)
+
+버튼 배열은 첫번째 줄부터
+ac +/- % /
+7 8 9 x
+4 5 6 - 
+1 2 3 +
+  0 . =   으로 한다.-->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="Calculator-container">
+        <div class="color-btn">
+            <div class="blinker" id="red"></div>
+            <div class="blinker" id="yellow"></div>
+            <div class="blinker" id="green"></div>
+        </div>
+        <div class="value-display"> 
+            <p class="initial-value">0</p>
+        </div>
+        <div class="button-display">
+            
+            <button class="button function" id="clear">AC</button>
+            <button class="button function">±</button>
+            <button class="button function" id="persent">%</button>
+            <button class="button operator" id="divide">/</button>
+
+            <button class="button num-button" id="7">7</button>
+            <button class="button num-button" id="8">8</button>
+            <button class="button num-button" id="9">9</button>
+            <button class="button operator" id="multiple">X</button>
+
+            <button class="button num-button" id="4">4</button>
+            <button class="button num-button" id="5">5</button>
+            <button class="button num-button" id="6">6</button>
+            <button class="button operator" id="minus">-</button>
+
+            <button class="button num-button" id="1">1</button>
+            <button class="button num-button" id="2">2</button>
+            <button class="button num-button" id="3">3</button>
+            <button class="button operator" id="plus">+</button>
+
+            <button class="button num-button zero" id="0">0</button>
+            <button class="button dot" id="dot">.</button>
+            <button class="button equal" id="equal">=</button>
+
+
+        </div>
+    </div>
+    <script src="pracScript.js"></script>
+</body>
+</html>

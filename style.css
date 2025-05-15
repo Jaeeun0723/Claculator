@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-image: url(https://i.pinimg.com/736x/d2/0d/ce/d20dced4f45f1c9b25e8313a6b796c8b.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.Calculator-container {
+    box-shadow: 10px 10px 9px rgba(96, 109, 96, 0.988);
+    border: 0.5px solid rgba(0, 0, 0, 0.32);
+    background-color: rgba(208, 237, 208, 0.863);
+    border-radius: 20px;
+    height: 500px;
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+.button-display, .value-display {
+    margin: 2px;
+}
+
+.value-display {
+    border: 2px hidden rgba(128, 128, 128, 0.359);
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.324);
+    box-shadow: 2px 2px 6px rgba(96, 109, 96, 0.656) inset;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 15px 0 15px;
+}
+
+.value-display p {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+}
+
+
+
+.button-display {
+    box-shadow: 3px 3px 4px rgba(96, 109, 96, 0.656) inset;
+    border: 0.5px solid rgba(157, 188, 157, 0.681);
+    border-radius: 10px;
+    background-color: rgba(244, 244, 244, 0.509);
+    padding: 10px;
+    margin-top: 30px;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button:hover {
+    background-color: rgb(204, 204, 204);
+}
+
+.button:active {
+    background-color: rgb(109, 109, 109);
+    color: rgb(243, 249, 255);
+}
+
+.button {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    box-shadow: 1px 1px 3px rgba(64, 75, 64, 0.656);
+    border: 2.3px solid rgba(0, 0, 0, 0.493);
+    border-radius: 50px;
+    flex: 1 1 25%;
+}
+
+.zero {
+    flex-basis: 50%;
+    border-radius: 50px;
+}
+
+.function, .operator, .equal {
+    background-color: rgba(102, 155, 102, 0.422);
+}
+
+.num-button, .dot {
+    background-color: rgba(102, 155, 102, 0.228);
+}
