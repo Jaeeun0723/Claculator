@@ -52,15 +52,15 @@ body {
 }
 
 .value-display p {
-    font-family: "Jersey 10", sans-serif;
-    font-weight: 400;
+    font-family:  'Galmuri11';
+    font-weight: 600;
     font-style: normal;
-    font-size: 35px;
+    font-size: 25px;
 }
 
 .delete {
-    font-family: "Jersey 10", sans-serif;
-    font-weight: 400;
+    font-family: 'Galmuri11';
+    font-weight: 600;
     font-style: normal;
     font-size: 20px;
 
@@ -100,10 +100,10 @@ body {
 
 
 .button {
-    font-family: "Jersey 10", sans-serif;
-    font-weight: 400;
+    font-family: 'Galmuri11';
+    font-weight: 600;
     font-style: normal;
-    font-size: 30px;
+    font-size: 23px;
     box-shadow: 1px 1px 3px rgba(64, 75, 64, 0.656);
     border: 2.3px solid rgba(0, 0, 0, 0.493);
     border-radius: 50px;
@@ -124,10 +124,10 @@ body {
 }
 
 .delete {
-    font-family: "Jersey 10", sans-serif;
-    font-weight: 400;
+    font-family: 'Galmuri11';
+    font-weight: 600;
     font-style: normal;
-    font-size: 20px;
+    font-size: 18px;
 
     border: 0.5px solid rgba(157, 188, 157, 0.681);
     background-color: rgba(102, 155, 102, 0.422);
