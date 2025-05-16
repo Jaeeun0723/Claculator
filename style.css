@@ -58,6 +58,23 @@ body {
     font-size: 35px;
 }
 
+.delete {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+
+    border: 0.5px solid rgba(157, 188, 157, 0.681);
+    background-color: rgba(102, 155, 102, 0.422);
+    border-radius: 7px;
+    box-shadow: 2px 2px 3px rgba(64, 75, 64, 0.656);
+
+    display :flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
 
 
 .button-display {
@@ -66,7 +83,7 @@ body {
     border-radius: 10px;
     background-color: rgba(244, 244, 244, 0.509);
     padding: 10px;
-    margin-top: 30px;
+    margin-top: 10px;
     height: 350px;
     display: flex;
     flex-wrap: wrap;
@@ -80,6 +97,7 @@ body {
     background-color: rgb(109, 109, 109);
     color: rgb(243, 249, 255);
 }
+
 
 .button {
     font-family: "Jersey 10", sans-serif;
@@ -103,4 +121,23 @@ body {
 
 .num-button, .dot {
     background-color: rgba(102, 155, 102, 0.228);
+}
+
+.delete {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+
+    border: 0.5px solid rgba(157, 188, 157, 0.681);
+    background-color: rgba(102, 155, 102, 0.422);
+    border-radius: 7px;
+    box-shadow: 2px 2px 3px rgba(64, 75, 64, 0.656);
+
+    display :flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+
+    flex: 0;
 }

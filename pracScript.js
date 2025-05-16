@@ -42,6 +42,13 @@ button.forEach((btn) => {
         } else if (clickedBtn === '%') { // %누르면 소수점(백분율)로 변환
             initialVal = initialVal * 1/100;
             display.textContent = initialVal
+        } else if (clickedBtn === 'D E L E T E') {
+            if (initialVal.length >= 2) {
+                initialVal = initialVal.slice(0,-1);
+            } else {
+                initialVal = '0';
+            }
+            display.textContent = initialVal
         }
         else if (clickedBtn === '=') { // = 을 입력했을때 
             if (operator && firstOperand !== null)
