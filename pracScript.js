@@ -6,6 +6,8 @@ let initialVal = '0' // 화면에 보이는 값
 let firstOperand = null; // 첫번째 피연산자
 let secondOperand = null; // 두번째 피연산자
 let operator = null; // 연산자
+const maxLength = 15; // 결과값 길이 제한
+
 
 
 numBtn.forEach ((btn) => { //숫자버튼 함수
@@ -43,6 +45,22 @@ button.forEach((btn) => {
                 display.textContent = initialVal
         } else if (clickedBtn === '%') { // %누르면 소수점(백분율)로 변환
             initialVal = initialVal * 1/100;
+            let resultStr = initialVal.toString();
+
+            if (resultStr.length > maxLength) {
+                if (resultStr.includes('.')) {
+                    const integerPartLength = resultStr.split('.')[0].length;
+                    const decimalsAllowed = maxLength - integerPartLength - 1;
+                    resultStr = Number(initialVal).toFixed(decimalsAllowed > 0 ? decimalsAllowed : 0);
+                    // 자르고도 길면 OVERFLOW 처리
+                    if (resultStr.length > maxLength) {
+                        resultStr = 'OVERFLOW';
+                    }
+                } else {
+                    resultStr = 'OVERFLOW';
+                }
+            }
+            initialVal = resultStr;
             display.textContent = initialVal
         } else if (clickedBtn === 'D E L E T E') {
             if (initialVal === 'OVERFLOW') {
@@ -66,15 +84,12 @@ button.forEach((btn) => {
                 // 두번째 피연산자 콘솔 출력
                 const result = calculate(firstOperand , operator, secondOperand);
                 //결과 변수명에 계산기 함수를 할당 후 (매개변수)
-                const maxLenght = 15;
+                
                 let resultStr = result.toString();
 
-                if (resultStr.length > maxLenght) {
+                if (resultStr.length > maxLength) {
                     if (resultStr.includes('.')) {
-                        const integerPartLength = resultStr.split('.')[0].length;
-                        const decimalsAllowed = maxLenght - integerPartLength - 1;
-
-                        resultStr = Nember(result).toFixed(decimalsAllowed > 0 ? decimalsAllowed : 0);
+                        resultStr = Number(result).toFixed(decimalsAllowed > 0 ? decimalsAllowed : 0);
                     } else {
                         resultStr = 'OVERFLOW';
                     }
