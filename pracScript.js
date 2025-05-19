@@ -15,7 +15,9 @@ numBtn.forEach ((btn) => { //숫자버튼 함수
         if (initialVal === '0') {
             initialVal = clickedNum;
         } else {
-            initialVal += clickedNum;
+            if (initialVal.replace('.', '').length < 10) {
+                initialVal += clickedNum;
+            }
         }
         display.textContent = initialVal;
     })
@@ -43,13 +45,19 @@ button.forEach((btn) => {
             initialVal = initialVal * 1/100;
             display.textContent = initialVal
         } else if (clickedBtn === 'D E L E T E') {
-            if (initialVal.length >= 2) {
+            if (initialVal === 'OVERFLOW') {
+                initialVal = '0';
+                firstOperand = null;
+                operator = null;
+                display.textContent = initialVal;
+            } else if (initialVal.length >= 2) {
                 initialVal = initialVal.slice(0,-1);
             } else {
                 initialVal = '0';
             }
-            display.textContent = initialVal
+            display.textContent = initialVal;
         }
+
         else if (clickedBtn === '=') { // = 을 입력했을때 
             if (operator && firstOperand !== null)
             // 첫번째 피연산자와 연산자가 입력이 되었을 때
@@ -58,8 +66,21 @@ button.forEach((btn) => {
                 // 두번째 피연산자 콘솔 출력
                 const result = calculate(firstOperand , operator, secondOperand);
                 //결과 변수명에 계산기 함수를 할당 후 (매개변수)
-                initialVal = result;
-                display.textContent = result; //계산 결과를 디스플레이에 출력
+                const maxLenght = 17;
+                let resultStr = result.toString();
+
+                if (resultStr.length > maxLenght) {
+                    if (resultStr.includes('.')) {
+                        const integerPartLength = resultStr.split('.')[0].length;
+                        const decimalsAllowed = maxLenght - integerPartLength - 1;
+
+                        resultStr = Nember(result).toFixed(decimalsAllowed > 0 ? decimalsAllowed : 0);
+                    } else {
+                        resultStr = 'OVERFLOW';
+                    }
+                }
+                initialVal = resultStr;
+                display.textContent = initialVal; //계산 결과를 디스플레이에 출력
                 console.log (`result : ${result}`);
                 firstOperand = null;
                 operator = null;
