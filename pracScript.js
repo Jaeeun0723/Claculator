@@ -66,7 +66,7 @@ button.forEach((btn) => {
                 // 두번째 피연산자 콘솔 출력
                 const result = calculate(firstOperand , operator, secondOperand);
                 //결과 변수명에 계산기 함수를 할당 후 (매개변수)
-                const maxLenght = 17;
+                const maxLenght = 15;
                 let resultStr = result.toString();
 
                 if (resultStr.length > maxLenght) {
