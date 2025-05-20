@@ -2,7 +2,7 @@ const button = document.querySelectorAll('.button');
 const display = document.querySelector('p');
 const numBtn = document.querySelectorAll('.num-button');
 
-let initialVal = '0' // 화면에 보이는 값
+let initialVal = "0" // 화면에 보이는 값
 let firstOperand = null; // 첫번째 피연산자
 let secondOperand = null; // 두번째 피연산자
 let operator = null; // 연산자
@@ -134,4 +134,46 @@ const calculate = (num1, oper, num2) => {
         default :
             console.log (`ERROR`);
     }
+}
+
+function openNotepad() {
+    const note = localStorage.getItem("memo") || "";
+    document.getElementById("noteContent").value = note;
+    document.getElementById("notepad").style.display = "block";
+}
+
+function closeNotepad() {
+    document.getElementById("notepad").style.display = "none";
+}
+
+function saveNotepad() {
+    const content = document.getElementById("noteContent").value;
+    localStorage.setItem("memo", content);
+    alert("저장했습니다.");
+}
+
+let isDragging = false;
+let offsetX, offsetY;
+
+function startDrag(e) {
+    isDragging = true;
+    const notepad = document.getElementById("notepad");
+    offsetX = e.clientX - notepad.offsetLeft;
+    offsetY = e.clientY - notepad.offsetTop;
+    document.addEventListener("mousemove", drag);
+    document.addEventListener("mouseup", stopDrag);
+}
+
+function drag(e) {
+    if (isDragging) {
+    const notepad = document.getElementById("notepad");
+    notepad.style.left = e.clientX - offsetX + "px";
+    notepad.style.top = e.clientY - offsetY + "px";
+    }
+}
+
+function stopDrag() {
+    isDragging = false;
+    document.removeEventListener("mousemove", drag);
+    document.removeEventListener("mouseup", stopDrag);
 }

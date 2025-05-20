@@ -21,12 +21,23 @@ ac +/- % /
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Galmuri11/Galmuri11.css" type="text/css"/>
 </head>
 <body>
-    <div class="Calculator-container">
-        <div class="color-btn">
-            <div class="blinker" id="red"></div>
-            <div class="blinker" id="yellow"></div>
-            <div class="blinker" id="green"></div>
+    <div id="desktop">
+        <div id="icon" ondblclick="openNotepad()">
+        📝<br>
         </div>
+    </div>
+    
+    <div id="notepad">
+        <div id="notepad-header" onmousedown="startDrag(event)">
+            <span>메모장</span>
+            <div>
+                <button onclick="saveNotepad()">저장</button>
+                <button onclick="closeNotepad()">X</button>
+            </div>  
+        </div>
+        <textarea id="noteContent"></textarea>
+    </div>
+    <div class="Calculator-container">
         <div class="value-display"> 
             <p class="initial-value">0</p>
         </div>

@@ -141,3 +141,40 @@ body {
 
     flex: 0;
 }
+
+#icon {
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+    margin: 20px;
+}
+
+#notepad {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 700px;
+    height: 700px;
+    background: white;
+    border: 1px solid #aaa;
+    box-shadow: 0 0 10px gray;
+    z-index: 10;
+}
+
+#notepad-header {
+    background: #eee;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    cursor: move;
+}
+
+#notepad textarea {
+    width: 100%;
+    height: 240px;
+    border: none;
+    resize: none;
+    padding: 5px;
+    box-sizing: border-box;
+}
