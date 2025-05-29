@@ -23,16 +23,16 @@ ac +/- % /
 <body>
     <div id="desktop">
         <div id="icon" ondblclick="openNotepad()">
-        📝<br>
+        MEMO<br>
         </div>
     </div>
     
     <div id="notepad">
         <div id="notepad-header" onmousedown="startDrag(event)">
-            <span>메모장</span>
+            <span class="memo-font">memo</span>
             <div>
-                <button onclick="saveNotepad()">저장</button>
-                <button onclick="closeNotepad()">X</button>
+                <button onclick="saveNotepad()" class="memo-btn">저장</button>
+                <button onclick="closeNotepad()" class="memo-btn">X</button>
             </div>  
         </div>
         <textarea id="noteContent"></textarea>

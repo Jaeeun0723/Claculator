@@ -143,23 +143,43 @@ body {
 }
 
 #icon {
+    font-family: 'Galmuri11';
+    font-weight: 600;
+    font-style: normal;
+    padding-bottom: 860%;
+    padding-left: 130%;
     width: 60px;
     text-align: center;
     cursor: pointer;
-    margin: 20px;
+}
+
+.memo-btn{
+    font-family: 'Galmuri11';
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.711);
+    border: none;
+    padding: 0 5px;
+}
+
+.memo-font{
+    color: rgba(0, 0, 0, 0.711);
 }
 
 #notepad {
+    font-family: 'Galmuri11';
+    font-weight: 600;
     display: none;
     position: absolute;
     top: 100px;
     left: 100px;
-    width: 700px;
-    height: 700px;
+    width: 400px;
+    height: 530px;
     background: white;
     border: 1px solid #aaa;
     box-shadow: 0 0 10px gray;
     z-index: 10;
+    background-image: url(https://i.pinimg.com/736x/a6/ea/98/a6ea98c716931d80e14d48077e855cd2.jpg);
+    background-size: 390px
 }
 
 #notepad-header {
@@ -171,10 +191,20 @@ body {
 }
 
 #notepad textarea {
-    width: 100%;
-    height: 240px;
+    font-family: 'Galmuri11';
+    font-size: 13.8px;
+    font-weight: 550;
+    margin: 0 15%;
+    width: 70%;
+    height:90%;
     border: none;
     resize: none;
     padding: 5px;
     box-sizing: border-box;
+    background-color: transparent;
+    line-height: 20.8px;
+}
+
+#notepad textarea:focus{
+    outline: none;
 }
